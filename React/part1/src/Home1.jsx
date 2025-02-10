@@ -5,7 +5,28 @@ import Ejercicios from './Ejercicios'; // AsegÃºrate de que este componente estÃ
 import Etapa2  from './Etapa2';
 
 // Componente Navbar
-
+const Navbar = () => {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+            App
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/ejercicios" className={({ isActive }) => (isActive ? "active" : "")}>
+            Ejercicios
+          </NavLink>
+        </li>
+        <li>
+            <NavLink to ="/Etapa2"className={({isActive})=>(isActive?"active":"")}
+            >Etapa2</NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
 // Componente Home1
 const Home1 = () => {
